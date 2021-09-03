@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Btn from "./components/Button";
+import Chkbx from "./components/Checkbox";
+import Grd from "./components/Grid";
+import MkStyl from "./components/MakeStyles";
+import TextInput from "./components/TextInput";
+import Typhy from "./components/Typography";
+import Cntnr from "./components/Container";
+import Theme from "./components/ThemeProvider";
+import ApBr from "./components/AppBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Cntnr>
+      <Theme>
+        <ApBr />
+        <h1>...........typography..........</h1>
+        <Typhy />
+        <h1>...........button..........</h1>
+        <Btn />
+        <h1>...........Grid..........</h1>
+        <Grd />
+        <h1>...........Checkbox.........</h1>
+        <Chkbx />
+        <h1>...........Text Input.........</h1>
+        <TextInput />
+        <h1>...........MakeStyles.........</h1>
+        <MkStyl />
+      </Theme>
+    </Cntnr>
   );
 }
 
 export default App;
+
+// we see some btns w icons. to have buttons w icons in material ui we need to install one more lib @material-ui/icons
